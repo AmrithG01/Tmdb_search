@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Movie Explorer</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <div class="filters">
+                <select id="genre-select">
+                    <option value="">All Genres</option>
+                </select>
+                <select id="year-select">
+                    <option value="">All Years</option>
+                </select>
+                <select id="sort-select">
+                    <option value="">Sort By</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="year">Newest</option>
+                    <option value="popularity">Most Popular</option>
+                    <option value="asc">A-Z</option>
+                </select>
+                <button id="clear-filters" class="btn">
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h1>Unlimited Movies, TV Shows and More</h1>
+            <p>
+                Discover trending movies and explore thousands
+                of titles from around the world.
+            </p>
+            <button class="hero-btn">
+                Browse Movies
+            </button>
+        </div>
+    </section>
+    <main class="main-container">
+
+        <section class="movie-section">
+            <div class="section-title">
+                <h2>🔥 Trending Movies</h2>
+            </div>
+            <div class="trending-wrapper">
+                <button class="scroll-btn prev-btn" id="trendingPrev">
+                    &#10094;
+                </button>
+                <div class="movies-row" id="trendingContainer">
+                    Loading Trending Movies...
+                </div>
+                <button class="scroll-btn next-btn" id="trendingNext">
+                    &#10095;
+                </button>
+            </div>
+        </section>
+
+        <section class="movie-section">
+
+            <div class="section-title">
+                <h2>🎬 Discover Movies</h2>
+            </div>
+
+            <div class="movies-grid" id="movieGrid">
+
+                <div class="loading">
+                    Loading Movies...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-left">
+                <img id="modalPoster" src="" alt="Movie Poster">
+            </div>
+            <div class="modal-right">
+                <h2 id="modalTitle">
+                    Movie Title
+                </h2>
+                <p id="modalYear"></p>
+                <p id="modalRating"></p>
+                <p id="modalOverview"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Movie Explorer |
+            Powered by TMDB API
+        </p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
